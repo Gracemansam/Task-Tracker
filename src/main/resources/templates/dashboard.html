@@ -103,7 +103,7 @@
             <div class="row justify-content-center pt-5">
                 <h6 class="text-muted"> Add A new Task: </h6>
                 <form th:action="@{/user/addTask}" method="POST" th:object="${newTaskDetails}">
-                    <input type="hidden" th:value="${#session.getAttribute('id')}" th:name="user_id">
+                    <input type="hidden" th:value="${#session.getAttribute('name')}" th:name="user_id">
                     <input type="hidden" value="pending" th:name="status">
                     <div class="row justify-content-space align-items-center">
                         <div class="col-3">

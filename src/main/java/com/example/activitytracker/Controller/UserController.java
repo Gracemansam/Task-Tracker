@@ -51,6 +51,7 @@ public class UserController {
            session.setAttribute("email" , user.getEmail());
            session.setAttribute("id" , user.getId());
            session.setAttribute("name" , user.getName());
+           model.addAttribute("successMessage" , message);
            return "redirect:/user/dashboard";
        }else{
            model.addAttribute("errorMessage" , message);
